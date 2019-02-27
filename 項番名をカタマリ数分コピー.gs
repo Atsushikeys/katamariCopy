@@ -1,5 +1,5 @@
 var ss = SpreadsheetApp.getActiveSpreadsheet();
-var sheetLestTwoLines = ss.getSheetByName("一次検証CSの項番と名前を貼る");
+var sheetLestTwoLines = ss.getSheetByName("CSの項番と名前を貼る");
 var sheetKobanOut = ss.getSheetByName("項番名出力シート");
 
 
