@@ -1,13 +1,14 @@
 var ss = SpreadsheetApp.getActiveSpreadsheet();
 var sheetEdaban = ss.getSheetByName("項番数を記入");
 var sheetOut = ss.getSheetByName("枝番出力用シート");
+var sheetCsNameAndNum = ss.getSheetByName("CSの項番と名前を貼る");
 
 //カタマリの行数を取得
 var katamariNum = sheetOut.getLastRow();
 
 //項番の数を取得
-var kobanNum = sheetEdaban.getRange(3, 1).getValue();
-
+//var kobanNum = sheetEdaban.getRange(3, 1).getValue();
+var kobanNum = sheetCsNameAndNum.getLastRow();
 
 function KatamariCopy(){
   
@@ -26,7 +27,7 @@ function KatamariCopy(){
     nowKatamariStartRow += katamariNum+1;
   
   }
-  
+  Logger.log("kobanNumは%sです",kobanNum);
 //KatamariCopy終わり  
 }
 
