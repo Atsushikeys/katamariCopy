@@ -58,7 +58,7 @@ function copyColumnAandB(){
 
 function ichiren(){
   KatamariCopy();
-  copyColumnAandB();
+  kobanNumAndNameCopy();
 }
 
 

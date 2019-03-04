@@ -1,11 +1,18 @@
 var ss = SpreadsheetApp.getActiveSpreadsheet();
 var sheetLestTwoLines = ss.getSheetByName("CSの項番と名前を貼る");
-var sheetKobanOut = ss.getSheetByName("項番名出力シート");
 
 
-var lastRow = sheetKobanOut.getLastRow();
+
+
 
 function kobanNumAndNameCopy(){
+  
+  
+  //20190304の一連作業のため、グローバル変数を関数内に移動
+  var sheetKobanOut = ss.getSheetByName("枝番出力用シート");
+  var lastRow = sheetKobanOut.getLastRow();
+  //移動した変数ここまで
+  
   
   var startTime = new Date();
   
@@ -36,8 +43,9 @@ function kobanNumAndNameCopy(){
   Logger.log("処理時間は%s秒でした",(endTime - startTime)/1000);
 }
 
-
+/*
 function clearAllKobanOut(){
   var lastRow = sheetKobanOut.getLastRow();
   sheetOut.getRange(1, 1, lastRow, 10).clear();
 }
+*/
